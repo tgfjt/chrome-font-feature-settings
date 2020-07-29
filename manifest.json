@@ -1,0 +1,23 @@
+{
+  "name": "Switch font-feature-settings",
+  "short_name": "font-feature-settings",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "A Chrome Extension to switch font-feature-settings",
+  "homepage_url": "https://github.com/tgfjt/chrome-font-feature-settings",
+  "author": "Takashi Fujita",
+  "permissions": [
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
